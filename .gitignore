@@ -21,3 +21,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+git -c user.name="vj-0143" -c user.email="vijaydhonim35@gmail.com" commit -m "message2"

@@ -4,13 +4,13 @@ import axios from 'axios';
 //import Home from './Home';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+    const navigate = useNavigate();
 
 
     const onSubmit = async (e) => {
@@ -21,7 +21,7 @@ const Login = () => {
         try {
             const res = await axios.post('http://localhost:5000/api/auth/login', user);
             console.log(res.data);
-            history.push('/ecommerce');
+            navigate('/ecommerce');
 
             alert("login succefullty")
         } catch (err) {

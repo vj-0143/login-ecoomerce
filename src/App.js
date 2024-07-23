@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route,  Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route,  Routes } from "react-router-dom";
 import Login from './components/Login';
 import Register from './components/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,11 +10,11 @@ function App() {
   return (
     <Router>
             <div>
-                <Switch>
-                    <Route exact path='/' component={Register} />
-                    <Route exact path='/login' component={Login} />
-                    <Route exact path='/ecommerce' component={Home}/>
-                </Switch>
+                <Routes>
+                    <Route exact path='/' element={<Register/>} />
+                    <Route exact path='/login' element={<Login/>} />
+                    <Route exact path='/ecommerce' element={<Home/>}/>
+                </Routes>
             </div>
         </Router>
   );
